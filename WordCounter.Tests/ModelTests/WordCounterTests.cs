@@ -19,5 +19,22 @@ namespace WordCounter.Tests
       string[] expectedWords = new string[] {"bread","is","my","fave","","i","can","not","live","without","bread"};
       Assert.AreEqual(expectedWords[1], testWordModel.ParseStringToArrayStrings(input1)[1]);
     }
+
+    [TestMethod]
+    public void TestCountWordsMatches()
+    {
+      //This is the string to be searched in
+      string input1 = "bread is my fave, i can not live without bread";
+      string input2 = "bread";
+      int expectedMatches = 2;
+
+      WordModel testWordModel = new WordModel();
+
+      string[] stringArray = testWordModel.ParseStringToArrayStrings(input1);
+
+      Assert.AreEqual(expectedMatches, testWordModel.CountWordsMatches(input2,stringArray));
+    }
+
+
   }
 }

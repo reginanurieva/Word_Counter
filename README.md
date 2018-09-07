@@ -6,7 +6,7 @@
 
 ## Description
 
-Program in C# a program that checks how frequently a word appears in a given string. The user should input both the word and a list of words to check. Program checks for full word matches only.
+Program in C# that checks how frequently a word appears in a given string. The user should input both the word and a list of words to check. Program checks for full word matches only.
 
 ## Specs
 1. The user enter a sentence(list of words).

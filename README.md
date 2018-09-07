@@ -1,4 +1,4 @@
-"Word Counter"
+# "Word Counter"
 
 #### Epicodus independent project in C#, 9.07.2018
 

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-// using System.Linq;
 
 namespace WordCounter.Models
 {
@@ -18,7 +17,7 @@ namespace WordCounter.Models
       int counter = 0;
       foreach (var word in stringArray)
       {
-        if(word == secondInput)
+        if(word.ToLower() == secondInput.ToLower())
         {
           counter++;
         }
@@ -28,40 +27,25 @@ namespace WordCounter.Models
   }
 
 
-public class Program
-{
-  static void Main()
+  public class Program
   {
-    Console.WriteLine("Please enter a sentence.");
-    // Console.ReadLine();
-    string enteredSentence = Console.ReadLine();
-    // Item newItem = new Item(enteredSentence);
+    static void Main()
+    {
+      Console.WriteLine("Please enter a sentence.");
 
-    Console.WriteLine("Please enter a word that you would like to count.");
-    string enteredWord = Console.ReadLine();
+      string enteredSentence = Console.ReadLine();
 
-    WordModel newWordModel = new WordModel();
+      Console.WriteLine("Please enter a word that you would like to count.");
+      string enteredWord = Console.ReadLine();
 
-    string[] stringArray = newWordModel.ParseStringToArrayStrings(enteredSentence);
+      WordModel newWordModel = new WordModel();
 
-    int result = newWordModel.CountWordsMatches(enteredWord,stringArray);
-    Console.WriteLine("The word appers " + result + " times");
-    // Main();
+      string[] stringArray = newWordModel.ParseStringToArrayStrings(enteredSentence);
 
-    // // x += counter[index++];
-    //
-    // if (CountWordsMatches(word == secondInput))
-    //   {
-    //     // int expectedMatches = counter;
-    //     Console.WriteLine("This word appear in your sentence" + counter + "times");
-    //     // return true;
-    //   }
-    //   else {
-    //     Console.WriteLine("Something went wrong!");
-    //     // return false;
-    //   }
+      int result = newWordModel.CountWordsMatches(enteredWord,stringArray);
+      Console.WriteLine("The word appears " + result + " times");
 
 
+    }
   }
-}
 }

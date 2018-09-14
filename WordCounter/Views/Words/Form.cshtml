@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counted Words</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="jumbotron">@Model.GetCity()</h1>
+      <h3>@Model.GetCity(), @Model.GetCountry()</h3>
+      <p>Yor're word appears in this sentence @Model.GetWord() times</p>
+      <a href="/wordcouter"><button class="btn btn-info">Back to Game</button></a>
+    </div>
+  </body>
+</html>

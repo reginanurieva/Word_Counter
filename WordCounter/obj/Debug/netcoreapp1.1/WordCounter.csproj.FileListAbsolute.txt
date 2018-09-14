@@ -1,0 +1,9 @@
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.deps.json
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.dll
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.pdb
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.csproj.CoreCompileInputs.cache
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.AssemblyInfo.cs
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.dll
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.pdb
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.runtimeconfig.json
+/Users/reginanurieva/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.runtimeconfig.dev.json

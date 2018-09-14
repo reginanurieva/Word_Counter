@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace WordCounter.Models
@@ -27,25 +26,25 @@ namespace WordCounter.Models
   }
 
 
-  public class Program
-  {
-    static void Main()
-    {
-      Console.WriteLine("Please enter a sentence.");
-
-      string enteredSentence = Console.ReadLine();
-
-      Console.WriteLine("Please enter a word that you would like to count.");
-      string enteredWord = Console.ReadLine();
-
-      WordModel newWordModel = new WordModel();
-
-      string[] stringArray = newWordModel.ParseStringToArrayStrings(enteredSentence);
-
-      int result = newWordModel.CountWordsMatches(enteredWord,stringArray);
-      Console.WriteLine("The word appears " + result + " times");
-
-
-    }
-  }
+  // public class Program
+  // {
+  //   static void Main()
+  //   {
+  //     Console.WriteLine("Please enter a sentence.");
+  //
+  //     string enteredSentence = Console.ReadLine();
+  //
+  //     Console.WriteLine("Please enter a word that you would like to count.");
+  //     string enteredWord = Console.ReadLine();
+  //
+  //     WordModel newWordModel = new WordModel();
+  //
+  //     string[] stringArray = newWordModel.ParseStringToArrayStrings(enteredSentence);
+  //
+  //     int result = newWordModel.CountWordsMatches(enteredWord,stringArray);
+  //     Console.WriteLine("The word appears " + result + " times");
+  //
+  //
+  //   }
+  // }
 }

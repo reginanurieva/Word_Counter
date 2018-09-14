@@ -34,7 +34,5 @@ namespace WordCounter.Tests
 
       Assert.AreEqual(expectedMatches, testWordModel.CountWordsMatches(input2,stringArray));
     }
-
-
   }
 }

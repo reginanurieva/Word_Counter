@@ -19,11 +19,11 @@ namespace WordCounter.Controllers
         //     return View();
         // }
 
-        [HttpPost("/wordcounter")]
+        [HttpPost("/wordcounter/result")]
         public ActionResult Result()
         {
-            string inputWord = Request.Form["new-word"];
-            string inputString = Request.Form["new-string"];
+            string inputWord = Request.Form["word"];
+            string inputString = Request.Form["sentence"];
             Dictionary<string,object> Result = new Dictionary<string,object>{};
             return View("Form");
             // CheckWord newWord = new CheckWord(Request.Form["/wordcounter"]);

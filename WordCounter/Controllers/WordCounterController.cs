@@ -5,14 +5,12 @@ using System;
 
 namespace WordCounter.Controllers
 {
-    public class WordCountersController : Controller
+    public class WordCounterController : Controller
     {
         [HttpGet("/wordcounter")]
         public ActionResult Index()
         {
-            // inputWords = input1.Split(delimiterChars);
-            return View("wordcounter");
-
+            return View();
         }
 
         // [HttpGet("/wordcouter/new")]
@@ -22,13 +20,17 @@ namespace WordCounter.Controllers
         // }
 
         [HttpPost("/wordcounter")]
-        public ActionResult NewWordCounter()
+        public ActionResult Result()
         {
-            CheckWord newCheckWord = new CheckWord(Request.Form["sentence"]);
-            List<CheckWord> allCheckWords= CheckWord.GetAll();
-            // newWordCounter.SaveWordCounter();
-            // List<CheckWord> allWordCounter = WordCounter.GetAll();
-            return View("Index", allCheckWords);
+            string inputWord = Request.Form["new-word"];
+            string inputString = Request.Form["new-string"];
+            Dictionary<string,object> Result = new Dictionary<string,object>{};
+            return View("Form");
+            // CheckWord newWord = new CheckWord(Request.Form["/wordcounter"]);
+            // List<CheckWord> allCheckWords= CheckWord.GetAll();
+            // // newWordCounter.SaveWordCounter();
+            // // List<CheckWord> allWordCounter = WordCounter.GetAll();
+            // return View("Index", allCheckWords);
         }
 
 

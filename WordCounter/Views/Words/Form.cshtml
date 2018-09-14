@@ -6,9 +6,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="jumbotron">@Model.GetCity()</h1>
-      <h3>@Model.GetCity(), @Model.GetCountry()</h3>
-      <p>Yor're word appears in this sentence @Model.GetWord() times</p>
+      <p>Youre word appears in this sentence @Model["counter"] times</p>
       <a href="/wordcouter"><button class="btn btn-info">Back to Game</button></a>
     </div>
   </body>

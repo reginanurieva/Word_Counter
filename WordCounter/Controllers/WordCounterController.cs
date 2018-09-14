@@ -12,6 +12,7 @@ namespace WordCounter.Controllers
         {
             // inputWords = input1.Split(delimiterChars);
             return View("wordcounter");
+
         }
 
         // [HttpGet("/wordcouter/new")]
@@ -23,10 +24,11 @@ namespace WordCounter.Controllers
         [HttpPost("/wordcounter")]
         public ActionResult NewWordCounter()
         {
-            CheckWord.newWordCounter = (Request.Form["sentence"], Request.Form["word"]);
+            CheckWord newCheckWord = new CheckWord(Request.Form["sentence"]);
+            List<CheckWord> allCheckWords= CheckWord.GetAll();
             // newWordCounter.SaveWordCounter();
             // List<CheckWord> allWordCounter = WordCounter.GetAll();
-            return View("Index", allWordCounter);
+            return View("Index", allCheckWords);
         }
 
 

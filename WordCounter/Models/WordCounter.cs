@@ -4,33 +4,60 @@ namespace WordCounter.Models
 {
   public class CheckWord
   {
-    public static string Sentence;
     public static List<CheckWord> inputWords = new List<CheckWord>() {};
+    public string inputSentence;
+    public string inputWord;
     // private char[] _delimiterChars = { ' ', ',', '.' };
     // private string[] inputWords = input1.Split(delimiterChars);
     // public string[] ParseStringToArrayStrings(string input1)
-    public CheckWord(string input1)
+    public CheckWord(string inputSentence, string inputWord)
     {
-      char[] delimiterChars = { ' ', ',', '.' };
-      string[] inputWords = input1.Split(delimiterChars);
+
+      // char[] delimiterChars = { ' ', ',', '.' };
+      // string[] inputWords = input1.Split(delimiterChars);
       // return delimiterChars;
-      inputWords.Add(this);
+      // Input = input1;
+      // inputWords.Add(this);
     }
 
-    public string input1 { get; set; }
+    // public string Input { get; set; }
 
     public int CountWordsMatches()
     {
+      char[] delimiterChars = { ' ', ',', '.' };
+      string[] inputList = inputWord.Split(delimiterChars);
       int counter = 0;
-      foreach (CheckWord word in inputWords)
+      foreach(string inputWord in inputList)
       {
-        if(word.ToLower())
-        {
-          counter++;
-        }
+        counter ++;
       }
       return counter;
+      // int[] counter = new int[inputWords.Count];
+      // int i = 0;
+      // foreach (CheckWord word in inputWords)
+      // {
+      //   counter[i] = word.CheckWord();
+      //   i++;
+        // if(word)
+        // {
+        //   counter++;
+        // }
+      // }
+      // return counter;
     }
+
+    // public int CheckWords()
+    // {
+    //   int count = 0;
+    //   int i = 0;
+    //   while ((i = Sentence.IndexOf(Input, i)) != -1)
+    // {
+    //   i += Input.Length;
+    //   count++;
+    // }
+    // return count;
+    //
+    // }
   }
 
 

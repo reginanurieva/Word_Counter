@@ -2,21 +2,29 @@ using System.Collections.Generic;
 
 namespace WordCounter.Models
 {
-  public class WordModel
+  public class CheckWord
   {
-    public string[] ParseStringToArrayStrings(string input1)
+    public static string Sentence;
+    public static List<CheckWord> inputWords = new List<CheckWord>() {};
+    // private char[] _delimiterChars = { ' ', ',', '.' };
+    // private string[] inputWords = input1.Split(delimiterChars);
+    // public string[] ParseStringToArrayStrings(string input1)
+    public CheckWord(string input1)
     {
       char[] delimiterChars = { ' ', ',', '.' };
       string[] inputWords = input1.Split(delimiterChars);
-      return inputWords;
+      // return delimiterChars;
+      inputWords.Add(this);
     }
 
-    public int CountWordsMatches(string secondInput, string[] stringArray)
+    public string input1 { get; set; }
+
+    public int CountWordsMatches()
     {
       int counter = 0;
-      foreach (var word in stringArray)
+      foreach (CheckWord word in inputWords)
       {
-        if(word.ToLower() == secondInput.ToLower())
+        if(word.ToLower())
         {
           counter++;
         }

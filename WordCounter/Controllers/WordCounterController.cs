@@ -5,34 +5,28 @@ using System;
 
 namespace WordCounter.Controllers
 {
-    public class WordCounter : Controller
+    public class WordCountersController : Controller
     {
-        [HttpGet("/wordcouter")]
+        [HttpGet("/wordcounter")]
         public ActionResult Index()
         {
-            List<WordCounter> allWordCounter = WordCounter.GetAll();
-            return View(allWordCounter);
+            // inputWords = input1.Split(delimiterChars);
+            return View("wordcounter");
         }
 
-        [HttpGet("/wordcouter/new")]
-        public ActionResult Form()
-        {
-            return View();
-        }
+        // [HttpGet("/wordcouter/new")]
+        // public ActionResult Form()
+        // {
+        //     return View();
+        // }
 
-        [HttpPost("/wordcouter")]
+        [HttpPost("/wordcounter")]
         public ActionResult NewWordCounter()
         {
-            WordCounter newWordCounter = new WordCounter(Request.Form["sentence"], Request.Form["word"]);
+            CheckWord.newWordCounter = (Request.Form["sentence"], Request.Form["word"]);
             // newWordCounter.SaveWordCounter();
-            List<WordCounter> allWordCounter = WordCounter.GetAll();
+            // List<CheckWord> allWordCounter = WordCounter.GetAll();
             return View("Index", allWordCounter);
-        }
-        [HttpGet("/wordcouter/{id}")]
-        public ActionResult Form(int id)
-        {
-          WordCounter place = WordCounter.Find(id);
-          return View(place);
         }
 
 

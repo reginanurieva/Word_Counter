@@ -1,6 +1,6 @@
 # "Word Counter"
 
-#### Epicodus independent project in C#, 9.07.2018
+#### Epicodus independent project in C#, 9.14.2018
 
 #### By Regina Nurieva
 
@@ -18,11 +18,28 @@ Program in C# that checks how frequently a word appears in a given string. The u
 
 ## Setup/Installation Requirements
 
-* Clone this repository from https://github.com/reginanurieva/Word_Counter.git
+* Clone this repository from https://github.com/reginanurieva/Word_Counter_UI.git
 * Open up in the console with the following command:
 ```
 cd WordCounter.Solutions
 ```
+* Navigate to the WordCounter folder:
+```
+cd WordCounter
+```
+* Run the following commands:
+```
+dotnet restore
+```
+
+```
+dotnet build
+```
+
+```
+dotnet run
+```
+
 
 ## Support and contact details
 

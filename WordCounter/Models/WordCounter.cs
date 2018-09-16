@@ -11,19 +11,19 @@ namespace WordCounter.Models
       return inputWords;
     }
 
-    public int CountWordsMatches(string secondInput, string[] stringArray)
+    public static int CountWordsInText(string countWord,string[] sentence)
     {
-      int counter = 0;
-      foreach (var word in stringArray)
-      {
-        if(word.ToLower() == secondInput.ToLower())
+        int counter = 0;
+        foreach (var word in sentence)
         {
-          counter++;
+            if (string.Equals(word, countWord, System.StringComparison.CurrentCultureIgnoreCase))
+            {
+                counter++;
+            }
         }
-      }
-      return counter;
+        return counter;
     }
-  }
+
 
 
   // public class Program
@@ -47,4 +47,5 @@ namespace WordCounter.Models
   //
   //   }
   // }
+}
 }

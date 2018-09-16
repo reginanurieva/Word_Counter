@@ -21,7 +21,7 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void TestCountWordsMatches()
+    public void TestCountWordsInText()
     {
       //This is the string to be searched in
       string input1 = "bread is my fave, i can not live without bread";
@@ -32,7 +32,7 @@ namespace WordCounter.Tests
 
       string[] stringArray = testWordModel.ParseStringToArrayStrings(input1);
 
-      Assert.AreEqual(expectedMatches, testWordModel.CountWordsMatches(input2,stringArray));
+      Assert.AreEqual(expectedMatches, WordModel.CountWordsInText(input2,stringArray));
     }
   }
 }

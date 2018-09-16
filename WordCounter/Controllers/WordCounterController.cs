@@ -10,6 +10,7 @@ namespace WordCounter.Controllers
         [HttpGet("/wordcounter")]
         public ActionResult Index()
         {
+            System.Diagnostics.Debug.WriteLine("Hey, I'm in the /wordCounter route");
             return View();
         }
 
@@ -19,19 +20,19 @@ namespace WordCounter.Controllers
         //     return View();
         // }
 
-        [HttpPost("/wordcounter/result")]
+        [HttpPost("/result")]
         public ActionResult Result()
         {
             string inputWord = Request.Form["word"];
             string inputString = Request.Form["sentence"];
-            Dictionary<string,object> Result = new Dictionary<string,object>{};
-            return View("Form");
-            // CheckWord newWord = new CheckWord(Request.Form["/wordcounter"]);
-            // List<CheckWord> allCheckWords= CheckWord.GetAll();
-            // // newWordCounter.SaveWordCounter();
-            // // List<CheckWord> allWordCounter = WordCounter.GetAll();
-            // return View("Index", allCheckWords);
+            System.Diagnostics.Debug.WriteLine(inputString);
+            int numberOfWordsInInputText = WordModel.CountWordsInText(inputWord, inputString.Split(' '));
+            return View("Result", numberOfWordsInInputText);
+
         }
+
+
+
 
 
     }

@@ -14,12 +14,6 @@ namespace WordCounter.Controllers
             return View();
         }
 
-        // [HttpGet("/wordcouter/new")]
-        // public ActionResult Form()
-        // {
-        //     return View();
-        // }
-
         [HttpPost("/result")]
         public ActionResult Result()
         {
@@ -30,10 +24,5 @@ namespace WordCounter.Controllers
             return View("Result", numberOfWordsInInputText);
 
         }
-
-
-
-
-
     }
 }
